@@ -1,0 +1,6 @@
+---
+const allPosts = await Astro.glob('../pages/posts/*.md');
+---
+<div class="fixed top-20 overflow-y-scroll w-1/4 scroll h-full">
+    {allPosts.map((post) => <li><a href={post.url}>{post.frontmatter.title}</a></li>)}
+</div>

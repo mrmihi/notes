@@ -1,0 +1,12 @@
+---
+const pageTitle = "ITP-Meetings";
+import BaseLayout from "../layouts/BaseLayout.astro";
+import PostList from "../components/PostList.astro";
+import InteractiveCom from "../components/InteractiveCom.astro";
+---
+<BaseLayout pageTitle = {pageTitle}>
+<div class="flex flex-row">
+    <PostList class="basis-1/4"/>
+    <InteractiveCom />
+</div>
+</BaseLayout>

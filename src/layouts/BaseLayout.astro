@@ -1,0 +1,26 @@
+---
+import Navigation from "../components/Navigation.astro";
+const { pageTitle } = Astro.props;
+import '../styles/reset.css';
+import '../styles/global.css';
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+  </head>
+
+  <body class="bg-repeat bg-contain bg-fixed text-white" style="background-image: url(/itp-meetings/black-bg.png);">
+    
+    <Navigation />
+    
+    <h1>{pageTitle}</h1>
+
+    <slot />
+  
+</body>
+</html>
